@@ -20,19 +20,29 @@ import logging
 #     logging.info("с")
 #     print(c)
 
-logging.basicConfig(filename='example.log',
-                    level=logging.INFO,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+# logging.basicConfig(filename='example.log',
+#                     level=logging.INFO,
+#                     format='%(asctime)s - %(levelname)s - %(message)s')
+#
+# try:
+#     a=int(input("Первое "))
+#     b=int(input("Втоое "))
+#     c = a/b
+#     logging.info("Идет деление")
+# except ZeroDivisionError:
+#     logging.error("Деление на ноль")
+# except ValueError:
+#     logging.error("Ошибка конвертации")
+# else:
+#     logging.info("Успешное деление")
+#     print(c)
 
-try:
-    a=int(input("Первое "))
-    b=int(input("Втоое "))
-    c = a/b
-    logging.info("Идет деление")
-except ZeroDivisionError:
-    logging.error("Деление на ноль")
-except ValueError:
-    logging.error("Ошибка конвертации")
-else:
-    logging.info("Успешное деление")
-    print(c)
+import unittest
+
+def add(a, b):
+    return a + b
+
+class Test(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add(1, 2), 3)
+        self.assertEqual(add(5, 5), 10)
